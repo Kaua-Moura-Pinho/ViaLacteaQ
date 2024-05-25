@@ -1,0 +1,33 @@
+.footer{
+    overflow: hidden;
+    position: sticky;
+    top: 100%;
+    background-color: #292b2c;
+    padding: 2em 1em;
+}
+
+h1{
+    font-weight: bold;
+    color: beige;
+    font-size: 1.5em;
+}
+
+a{
+    color: bisque;
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: 1em;
+}
+
+a:hover{
+    color: cadetblue;
+}
+
+i{
+    padding: 0 0.1em;
+}
+
+p{
+    color: turquoise;
+    font-size: 1em;
+}

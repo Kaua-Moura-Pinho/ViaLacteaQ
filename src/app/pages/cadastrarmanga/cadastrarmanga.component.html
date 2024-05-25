@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<main class="p-3">
+    <h1 class="mb-3 text-center">Cadastro de Quadrinhos</h1>
+    <div class="container-fuild text-center d-flex card">
+        <form [formGroup]="form" class="row g-4 p-3">
+            <div class="col-12 col-md-4">
+                <div class="form-outline ">
+                    <input class="w3-input" formControlName="nome" placeholder="Nome da História" />
+                    <div class="d-flex" *ngIf="form.get('nome')?.errors?.['required'] && form.get('nome')?.touched">
+                        <small class="text-danger">
+                            Nome é obrigatório
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-outline ">
+                    <input class="w3-input" formControlName="autor" placeholder="Autor" />
+                    <div class="d-flex" *ngIf="form.get('autor')?.errors?.['required'] && form.get('autor')?.touched">
+                        <small class="text-danger">
+                            Autor é obrigatório
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-outline">
+                    <input class="w3-input" formControlName="volume" placeholder="Volume" />
+                    <div class="d-flex" *ngIf="form.get('volume')?.errors?.['required'] && form.get('volume')?.touched">
+                        <small class="text-danger">
+                            Volume é obrigatório
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-outline">
+                    <input class="w3-input" formControlName="qtdpgs" placeholder="Quantidade de Páginas" />
+                    <div class="d-flex" *ngIf="form.get('qtdpgs')?.errors?.['required'] && form.get('qtdpgs')?.touched">
+                        <small class="text-danger">
+                            Quantidade de páginas é obrigatório
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="form-outline">
+                    <input class="w3-input" formControlName="data" placeholder="Data de publicação" />
+                    <div class="d-flex" *ngIf="form.get('data')?.errors?.['required'] && form.get('data')?.touched">
+                        <small class="text-danger">
+                            Data de Publicação é obrigatório
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="btn-cadastro">
+                    <button class="btn btn-primary btn-block fa-lg " type="button"
+                        (onClick)="validarCadastro()" [disabled]="form.invalid">Salvar</button>
+                </div>
+            </div>
+            <br>
+        </form>
+        <div class="col-12">
+            <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover lnk"
+                routerLink="../listarmangas" routerLinkActive="active-link">Lista de Quadrinhos</a>
+        </div>
+    </div>
+</main>

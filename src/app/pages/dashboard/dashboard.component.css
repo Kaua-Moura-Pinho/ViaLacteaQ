@@ -1,0 +1,77 @@
+main{
+    background-image: linear-gradient(#fc2f7c, white);
+}
+
+h1{
+    position: relative;
+    z-index: 2;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente para melhor contraste */
+    border-radius: 10px;
+    color: turquoise;
+}
+
+h6{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 2em;
+}
+
+.cyan {
+    background-color: turquoise;
+    color: #fff;
+    border: none;
+}
+
+.lima {
+    background-color: #6cef26;
+    color: #fff;
+    border: none;
+}
+
+.dark-pink {
+    background-color: #dd3675;
+    color: #fff;
+    border: none;
+}
+
+.red {
+    background-color: #d8363a;
+    color: #fff;
+    border: none;
+}
+
+.add-manga{
+    display: flex;
+    justify-content: right;
+    
+}
+
+.btn-add{
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-add div{
+    width: 5em;
+    text-align: center;
+    border-radius: 0.6em;
+    background-color: blue;
+}
+
+.btn-add div:hover {
+    transform: scale(1.05);
+    background-color: turquoise;
+    color: #EA0057;
+
+}
+
+.mmv{
+    color: turquoise;
+}

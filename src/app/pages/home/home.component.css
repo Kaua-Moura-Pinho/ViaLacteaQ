@@ -1,0 +1,143 @@
+/* Definindo cores base e gradientes */
+/* :root {
+    --cor-inicial: #f82c79;  /// Cor rosa vibrante 
+    --preto: #000;           /// Preto para o fundo e transição 
+    --branco: #fff;          /// Branco para o texto 
+}*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+.banner {
+    background-image: url(../../../assets/img/banner.png);
+    background-blend-mode: overlay;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: turquoise;
+}
+
+.banner::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Adiciona um overlay escuro para melhorar a leitura */
+    z-index: 1;
+}
+
+.banner h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente para melhor contraste */
+    border-radius: 10px;
+}
+
+/*.section0{
+    height: 1em;
+    filter:blur();
+    background-color: #fc2f7c;
+}
+*/
+
+#fix{
+    background-color: #fd6ea5;
+    border: 2em;
+    border-color: #fff;
+}
+
+#fix h2, .section2 h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    color: #000;
+    font-weight: bold;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+.section2{
+    background-color: #ff98c0;
+}
+
+.section1-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em ;
+    mix-blend-mode: multiply;
+    color: turquoise;
+    background-image: linear-gradient(#fd6ea5, #ff98c0);
+}
+
+.section1-1 > div {
+    flex: 1 1 30%;
+    max-width: calc(33% - 10em); /* Calcula o espaço máximo respeitando as margens */   
+    min-width: 290px; /* Largura mínima para responsividade */
+    margin: 10px;
+    background-color: #1a1818;
+    box-shadow: 10px 15px 10px rgba(0,0,0,4);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+
+.section1 h1 {
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    flex: 0 1 auto; /* Não cresce, não encolhe, baseado no conteúdo */
+}
+
+.section1 img {
+    max-width: 10em;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 15em;
+}
+
+
+.button-container {
+    width: 100%;
+    padding: 0 10px;  /* Adiciona padding nas laterais dentro dos blocos */
+}
+
+button {
+    background-color: var(--cor-inicial);
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    width: 50%; /* Botão se expande para preencher o container */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: auto;  /* Alinha o botão na parte inferior do container */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #1a1818;
+}
+
+button:hover {
+    background-color: #000;
+    border: 1px solid #EA0057;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    padding: 0.5em;
+    text-indent: 1em;
+}

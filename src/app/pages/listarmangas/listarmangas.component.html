@@ -1,0 +1,45 @@
+<main class="p-3" style="background-color: turquoise;">
+<h1 class="my-3 text-center">Quadrinhos Cadastrados</h1>
+
+    <div class="card p-3">
+
+        <input type="text" class="form-control my-1" placeholder="Pesquisar..." [(ngModel)]="searchText">
+    
+        <div class="table-responsive">
+    
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="co2">Nome</th>
+                        <th scope="co3">Autor</th>
+                        <th scope="co4">Volume</th>
+                        <th scope="co5">Quantidade de Páginas</th>
+                        <th scope="co6">Data de Publicação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        *ngFor="let item of items | filter: searchText | paginate: { itemsPerPage: pageSize, currentPage: page }">
+                        <th scope="row">{{ item.id }}</th>
+                        <td>{{ item.nome }}</td>
+                        <td>{{ item.autor }}</td>
+                        <td>{{ item.volume }}</td>
+                        <td>{{ item.qtdpgs }}</td>
+                        <td>{{ item.data }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="pagination d-flex justify-content-end" *ngIf="items.length > 0">
+            <pagination-controls (pageChange)="page = $event" 
+                ></pagination-controls>
+            </div>
+            <br>
+            <div class="col-12">
+                <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            routerLink="../cadastrarmanga" routerLinkActive="active-link">Voltar</a>
+            </div>
+        </div>
+</main>

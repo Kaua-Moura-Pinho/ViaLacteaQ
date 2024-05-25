@@ -1,0 +1,35 @@
+<main class="p-3">
+    <div class="container-fluid cards-area mb-3">
+        <h1 class="mb-3 text-center">Dashboard de AdSense</h1>
+        <hr>
+        <div class="add-manga">
+            <a class="btn-add" routerLink="../cadastrarmanga" routerLinkActive="active-link">
+                <div>
+                    <p>Adicionar</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="container-fuild text-center d-flex">
+        <div class="row row-cols-2">
+            <div class="col-12">
+                <h6><strong class="mmv">Histórias mais vendidos</strong></h6>
+                <div class="chart-container card">
+                    <canvas id="chartLine">{{ chart }}</canvas>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h6><strong class="text-black-50">Categorias mais Compradas</strong></h6>
+                <div class="chart-container card">
+                    <canvas id="chartPie2">{{ chart }}</canvas>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h6><strong class="text-black-50">Períodos de Vendas(Mês)</strong></h6>
+                <div class="chart-container card">
+                    <canvas id="chartBar">{{ chart }}</canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,22 @@
+main{
+    background-image: linear-gradient(#fc2f7c, white);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+
+h1{
+    position: relative;
+    z-index: 2;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente para melhor contraste */
+    border-radius: 10px;
+    color: turquoise;
+    font-family: 'Courier New', Courier, monospace
+}
+
+a{
+    padding: 5em;
+}

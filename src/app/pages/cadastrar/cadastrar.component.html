@@ -1,0 +1,41 @@
+<div class="page">
+    <form [formGroup]="formulario" method="POST" class="formLogin">
+        <h1>Cadastrar</h1>
+        <p>Preencha os campos abaixo.</p>
+        <label for="username">Nome</label>
+        <input id="username" formControlName="username" type="text" placeholder="Digite seu Nome" />
+        <div class="acusaerro"
+            *ngIf="formulario.get('username')?.errors?.['required'] && formulario.get('username')?.touched">
+            Nome obrigatório!
+        </div>
+        <label for=" email">E-mail</label>
+        <input formControlName="email" type="email" placeholder="Digite seu e-mail" />
+        <div class="acusaerro"
+            *ngIf="formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched">
+            E-mail obrigatório!
+        </div>
+        <div class="acusaerro" *ngIf="formulario.get('email')?.errors?.['email'] && formulario.get('email')?.touched">
+            E-mail inválido!
+        </div>
+        <label for="password">Senha</label>
+        <input formControlName="password" type="password" placeholder="Crie uma senha" />
+        <div class="acusaerro"
+            *ngIf="formulario.get('password')?.errors?.['required'] && formulario.get('password')?.touched">
+            Senha obrigatória!
+        </div>
+        <div class="acusaerro"
+            *ngIf="formulario.get('password')?.errors?.['minlength'] && formulario.get('password')?.touched">
+            A senha deve ter mais de 8 caracteres!
+        </div>
+        <div>
+            
+            Li e estou de acordo com os <a href="" (click)="openModal(); $event.preventDefault()">Termos de Uso</a><input formControlName="lgpd" id="lgpd" type="checkbox">
+        </div>
+        <input [disabled]="!formulario.valid" type="submit" value="Cadastrar" class="btn" />
+    </form>
+    <div id="cad">
+        <h5>Já faz parte da tropa?</h5>
+        <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            routerLink="../login" routerLinkActive="active-link">Entre aqui!</a>
+    </div>
+</div>
